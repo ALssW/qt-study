@@ -703,3 +703,29 @@ MyWidget::~MyWidget()
 
 ```
 
+
+
+# QtSource
+
+QT 中的资源管理
+
+添加文件`res.qrc`
+
+```xml
+<RCC>
+    <qresource prefix="资源自定义前缀">
+        <file>资源路径</file>
+    </qresource>
+</RCC>
+```
+
+
+
+使用：
+
+```cpp
+// 添加图片
+ui->action1->setIcon(QIcon(":img/res/image.png"));
+ui->pushButton->setIcon(QIcon(":img/res/image.png"));
+```
+
