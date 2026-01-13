@@ -1,5 +1,5 @@
-#ifndef MTWIDGET_H
-#define MTWIDGET_H
+#ifndef MYWIDGET_H
+#define MYWIDGET_H
 
 #include "student.h"
 #include "teacher.h"
@@ -7,7 +7,7 @@
 #include <QWidget>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MtWidget; }
+namespace Ui { class MyWidget; }
 QT_END_NAMESPACE
 
 class MyWidget : public QWidget
@@ -15,11 +15,11 @@ class MyWidget : public QWidget
     Q_OBJECT
 
 public:
-    MyWidget(QWidget *parent = nullptr);
-    ~MyWidget();
+    explicit MyWidget(QWidget *parent = nullptr);
+    ~MyWidget() override;
 
 private:
-    Ui::MtWidget *ui;
+    Ui::MyWidget *ui;
 
     Teacher* t;
     Student* stu;
@@ -27,4 +27,4 @@ private:
     void signalTrigger();
 
 };
-#endif // MTWIDGET_H
+#endif // MYWIDGET_H

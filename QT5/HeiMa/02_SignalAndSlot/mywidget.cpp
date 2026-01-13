@@ -1,14 +1,14 @@
 #include "mywidget.h"
 #include "student.h"
 #include "teacher.h"
-#include "ui_mtwidget.h"
+#include "ui_mywidget.h"
 
 #include <QDebug>
 #include <QPushButton>
 
 MyWidget::MyWidget(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::MtWidget)
+    , ui(new Ui::MyWidget)
 {
     ui->setupUi(this);
 
