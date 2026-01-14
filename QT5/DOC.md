@@ -334,6 +334,8 @@ int main(int argc, char *argv[])
 
 通过对象的析构函数触发 `QObject` 对象树的析构流程
 
+---
+
 
 
 # QT如何将ui和代码关联
@@ -728,4 +730,8 @@ QT 中的资源管理
 ui->action1->setIcon(QIcon(":img/res/image.png"));
 ui->pushButton->setIcon(QIcon(":img/res/image.png"));
 ```
+
+
+
+# QtDialog
 
