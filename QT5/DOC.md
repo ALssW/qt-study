@@ -735,3 +735,78 @@ ui->pushButton->setIcon(QIcon(":img/res/image.png"));
 
 # QtDialog
 
+模态: `QtDialog.exe();` 弹出后阻塞进程
+
+非模态: `QtDialog.show();` 弹出后不阻塞进程
+
+```cpp
+QPushButton* btn = new QPushButton("click", this);
+QPushButton* btn2 = new QPushButton("click", this);
+btn2->move(btn->x() + btn->width(), btn->y());
+
+QDialog* log1 = new QDialog(this);
+
+// 模态 - 阻塞
+connect(btn, &QPushButton::clicked, log1, &QDialog::exec);
+// 非模态 - 不阻塞
+connect(btn2, &QPushButton::clicked, log1, &QDialog::show);
+```
+
+
+
+## QMessageBox
+
+提示对话框
+
+```cpp
+// 错误
+QMessageBox::critical(this, "错误", "错误");
+// 信息
+QMessageBox::information(this, "信息", "消息");
+// 提问 返回点击的按钮
+QMessageBox::StandardButton clickBtn = QMessageBox::question(this, "你好", "选择",
+                                                             QMessageBox::StandardButton::Save |
+                                                             QMessageBox::StandardButton::Ok | QMessageBox::Cancel);
+if (clickBtn == QMessageBox::Save)
+{
+    qDebug("点击 save");
+}
+else if (clickBtn == QMessageBox::Cancel)
+{
+    qDebug("点击 cancel");
+}
+else if (clickBtn == QMessageBox::Ok)
+{
+    qDebug("点击 ok");
+}
+
+// 警告
+QMessageBox::warning(this, "警告", "warn");
+```
+
+
+
+## QColorDialog
+
+```cpp
+// 颜色对话框
+QColor color = QColorDialo g::getColor();
+qDebug() << "color " << color;
+```
+
+
+
+## QFileDialog
+
+```cpp
+QPushButton* btn = new QPushButton(this);
+
+// 文件对话框
+QString filename = QFileDialog::getOpenFileName(this, "选择文件", "D:/", "(*.png )");
+qDebug() << "file name " << filename;
+btn->setIcon(QIcon(filename));
+btn->show();
+```
+
+
+
