@@ -1,13 +1,6 @@
 cmake_minimum_required(VERSION 4.1)
 project(qt5-01_stater)
 
-set(CMAKE_PREFIX_PATH "D:/dev/software/QT_A/6.10.1/mingw_64/lib/cmake")
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
-
 find_package(Qt6 COMPONENTS
         Core
         Gui
@@ -23,7 +16,7 @@ add_executable(qt5-01_stater
         mybutton2.cpp
         mybutton2.h)
 
-target_link_libraries(qt5-01_stater
+target_link_libraries(qt5-01_stater PRIVATE
         Qt::Core
         Qt::Gui
         Qt::Widgets

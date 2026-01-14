@@ -1,23 +1,22 @@
-cmake_minimum_required(VERSION 4.1)
-project(qt5-02-SignalAndSlot)
+project(qt5-04-QtDialog)
 
-find_package(Qt6 COMPONENTS
+add_executable(qt5-04-QtDialog
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+        mainwindow.ui
+)
+
+find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
         REQUIRED)
 
-add_executable(qt5-02-SignalAndSlot
-        main.cpp
-        mywidget.cpp
-        student.cpp
-        teacher.cpp
-)
-
-target_link_libraries(qt5-02-SignalAndSlot
-        Qt::Core
-        Qt::Gui
-        Qt::Widgets
+target_link_libraries(qt5-04-QtDialog PRIVATE
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
 )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)

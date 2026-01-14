@@ -1,21 +1,15 @@
 cmake_minimum_required(VERSION 4.1)
 project(qt5-03-QtSource)
 
-set(CMAKE_PREFIX_PATH "D:/dev/software/QT_A/6.10.1/mingw_64/lib/cmake")
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
 set(QRC_SOURCE_FILE res.qrc)
-
-qt_add_resources(${QRC_SOURCE_FILE})
 
 find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
         REQUIRED)
+
+qt_add_resources(${QRC_SOURCE_FILE})
 
 add_executable(qt5-03-QtSource
         ${QRC_SOURCE_FILE}
