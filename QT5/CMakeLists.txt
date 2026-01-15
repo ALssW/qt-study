@@ -11,4 +11,5 @@ add_subdirectory(01_stater)
 add_subdirectory(02_SignalAndSlot)
 add_subdirectory(03_QtSource)
 add_subdirectory(04_QtDialog)
+add_subdirectory(05_QtLayout)
 

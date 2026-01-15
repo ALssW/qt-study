@@ -808,5 +808,10 @@ btn->setIcon(QIcon(filename));
 btn->show();
 ```
 
+# QtLayout
 
+![image-20260115115518181](./assets/image-20260115115518181.png)
 
+使用格栅布局
+
+![image-20260115120019534](./assets/image-20260115120019534.png)
