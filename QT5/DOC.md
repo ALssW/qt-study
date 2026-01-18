@@ -815,3 +815,13 @@ btn->show();
 使用格栅布局
 
 ![image-20260115120019534](./assets/image-20260115120019534.png)
+
+
+
+# QtControl
+
+
+
+GroupBox
+
+![image-20260118183852770](.assets/image-20260118183852770.png)
